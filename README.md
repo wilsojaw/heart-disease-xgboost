@@ -12,25 +12,22 @@ This project is an end-to-end machine learning pipeline for predicting heart dis
 ## Installation
 
 1. Clone the repository:
-
-   ```bash
    git clone https://github.com/wilsojaw/heart-disease-xgboost.git
    cd heart-disease-xgboost
-
+2. Create a virtual environment and activate it:
    python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-3.	Install the dependencies:
-pip install -r requirements.txt
+3. Install the dependencies:
+	pip intall -r requirements.txt
 
 Training the Model
-	1.	Preprocess the data and train the model using:
+	1. Preprocess the data and train the model using:
+ 	python src/train.py
 
-python src/train.py
-
-	2.	This will:
-	•	Preprocess the data (handle missing values, one-hot encode categorical features).
-	•	Train the model and save it as model/model.pkl.
+	2. This will:
+		• Preprocess the data (handle missing values, one-hot encode categorical features).
+		• Train the model and save it as model/model.pkl.
 
 Running the FastAPI Server
 
@@ -38,8 +35,8 @@ Once the model is trained, start the FastAPI server to expose the model’s pred
 	1.	Run the server with:
  		uvicorn api.main:app --reload
 
-		2.	The API will be available at http://127.0.0.1:8000.
-	3.	Access the API docs at:
+	2. The API will be available at http://127.0.0.1:8000.
+	3. Access the API docs at:
 
  The Swagger UI will let you interactively test the /predict endpoint.
 
